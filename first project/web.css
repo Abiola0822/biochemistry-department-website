@@ -1,0 +1,146 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header Styles */
+header {
+  background-color: #0078d4;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logo {
+  width: 100px; /* Adjust the size as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Space between logo and text */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+header p {
+  margin: 5px 0 0;
+  font-size: 1.2em;
+}
+
+/* Navigation Styles */
+nav {
+  background-color: #333;
+  padding: 10px;
+  text-align: end;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.1em;
+}
+
+nav a:hover {
+  color: #0078d4;
+}
+
+/* Section Styles */
+section {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  color: #0078d4;
+  border-bottom: 2px solid #0078d4;
+  padding-bottom: 10px;
+}
+
+h2 {
+  color: #0078d4;
+  padding-bottom: 10px;
+  font-size: 35px;
+  text-align: center;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  nav a {
+      display: block;
+      margin: 10px 0;
+  }
+
+  section {
+      padding: 15px;
+      margin: 10px;
+  }
+}
+
+/* Body Styles with Blurry Background */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-image: url('images/dna\ logo.jpg'); /* Path to your DNA image */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; /* Keep the background fixed while scrolling */
+  position: relative; /* Required for the blur overlay */
+}
+
+/* Blurry Overlay */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('images/dna\ logo.jpg'); /* Same image for the overlay */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: blur(8px); /* Apply blur effect */
+  z-index: -1; /* Place the overlay behind the content */
+}
+
+/* Ensure Content is Readable */
+section {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
